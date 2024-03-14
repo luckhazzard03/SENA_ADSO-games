@@ -3,6 +3,7 @@ Author:ING. DIEGO CASALLAS
 Date:08/03/2024
 Description:This class is responsible for managing the memory game developed in JavaScript, HTML, CSS
 */
+
 class Game {
   //Constructor method responsible for initializing the attributes,
   //receives three data, the game container and the difficulty level

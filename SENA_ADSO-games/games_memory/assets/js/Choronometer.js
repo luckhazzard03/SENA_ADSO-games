@@ -1,17 +1,12 @@
-/*
-Author:ING. DIEGO CASALLAS
-Date:13/04/2024
-Description:
-*/
-//Define la clase llamada Choronometer, que se utiliza para crear un cronómetro en la página web.
+// Define the Choronometer class, which is used to create a stopwatch on the web page.
 class Choronometer {
-  // Método constructor que recibe tres parámetros (choronometerId, speed, maxMilliseconds)
+  // Constructor method that receives three parameters (choronometerId, speed, maxMilliseconds)
   constructor(choronometerId, speed, maxMilliseconds) {
-    //se inicializa y busca el elemento HTML en el documento con el ID proporcionado y se almacena en this.objChoronometer.
-    this.objChoronometer = document.getElementById(choronometerId);
-    // Se inicializan los elementos label dentro del elemento this.objChoronometer y se almacenan en this.getElementsLabel.
+    // Initialize and search for the HTML element in the document with the provided ID and store it in this.objChoronometer.
+    this.objChoronometer = document.getElementById(choronometerId); //choronometerId
+    // Initialize the label elements within the this.objChoronometer element and store them in this.getElementsLabel.
     this.getElementsLabel = this.objChoronometer.querySelectorAll("label");
-    //se inicializan las variables para el cronómetro
+    // Initialize variables for the stopwatch
     this.conT = 0;
     this.seconds = "00";
     this.minutes = "00";
@@ -19,15 +14,15 @@ class Choronometer {
     this.secondsAux = 0;
     this.minutesAux = 0;
     this.hourdAux = 0;
-    /*Se asignan los valores de velocidad y tiempo máximo, y se inicializa una variable intervalID para 
-	almacenar el ID del intervalo que controla la actualización del cronómetro.*/
+    /* Assign speed and maximum time values, and initialize an intervalID variable to 
+	store the ID of the interval that controls the stopwatch update. */
     this.speed = speed;
     this.maxMilliseconds = maxMilliseconds;
     this.intervalID;
-    this.progress = 0; // Inicializa el progreso en 0
-    this.progressBar = document.getElementById("progressBar"); // Obtén la barra de progreso
+    this.progress = 0; // Initialize progress to 0
+    this.progressBar = document.getElementById("progressBar"); // Get the progress bar
   }
-  //método comienza el cronómetro.
+  // Method starts the stopwatch.
   startChoronometer() {
     this.intervalID = setInterval(() => {
       this.seconds = this.secondsAux.toString().padStart(2, "0");
@@ -52,32 +47,32 @@ class Choronometer {
 
       this.progress = (this.conT / this.maxMilliseconds) * 100;
       this.progressBar.style.width = this.progress + "%";
-      // Verificar si el progreso es mayor o igual a 100
+      // Check if progress is greater than or equal to 100
       if (this.progress >= 100) {
         this.clearChoronometer();
-        console.log("Cronómetro finalizado");
+        console.log("Stopwatch finished");
         return;
       }
 
       if (this.conT >= this.maxMilliseconds) {
         this.clearChoronometer();
-        console.log("Tiempo máximo alcanzado");
+        console.log("Maximum time reached");
         return;
       }
 
       this.conT++;
     }, this.speed);
   }
-  //método detiene el cronómetro y lo reinicia.
+  // Method stops the stopwatch and resets it.
   clearChoronometer() {
-    //Se limpia el intervalo de actualización del cronómetro.
+    // Clear the interval for updating the stopwatch.
     clearInterval(this.intervalID);
-    //Se reinician los elementos HTML que muestran las horas, minutos y segundos a "00".
+    // Reset the HTML elements showing hours, minutes, and seconds to "00".
     this.getElementsLabel[0].innerHTML = "00";
     this.getElementsLabel[1].innerHTML = "00";
     this.getElementsLabel[2].innerHTML = "00";
   }
-  // métodos  que permiten obtener los valores actuales de segundos, minutos y horas del cronómetro.
+  // Methods to get the current values of seconds, minutes, and hours from the stopwatch.
   getSeconds() {
     return this.seconds;
   }

@@ -1,22 +1,24 @@
-// Se declara la variable global para almacenar la instancia de la clase Game
+// Declares the global variable to store the instance of the Game class
 var objClass;
-// Se define las constantes para los IDs de los elementos HTML relevantes
-const contId = "containerGame"; // ID del contenedor del juego
-const progress = "progressbarId"; // ID de la barra de progreso
-const choronometer = "choronometerId"; // ID del cronómetro
-// Se define los valores constantes para la velocidad y el tiempo máximo del cronómetro
-const speed = 100; // Velocidad en milisegundos
-const maxMilliseconds = 2000; // Tiempo máximo en milisegundos
 
-// Función para establecer el nivel del juego
+// Defines constants for the IDs of relevant HTML elements
+const contId = "containerGame"; // ID of the game container
+const progress = "progressbarId"; // ID of the progress bar
+const choronometer = "choronometerId"; // ID of the chronometer
+
+// Defines constant values for the speed and maximum time of the chronometer
+const speed = 100; // Speed in milliseconds
+const maxMilliseconds = 2000; // Maximum time in milliseconds
+
+// Function to set the game level
 function setLevel(value) {
-  // Se crea una nueva instancia de la clase Game y la almacenamos en objClass
+  // Creates a new instance of the Game class and stores it in objClass
   objClass = new Game(
-    contId, // ID del contenedor del juego
-    value, // Nivel del juego
-    progress, // ID de la barra de progreso
-    choronometer, // ID del cronómetro
-    speed, // Velocidad del cronómetro
-    maxMilliseconds // Tiempo máximo del cronómetro
+    contId, // ID of the game container
+    value, // Game level
+    progress, // ID of the progress bar
+    choronometer, // ID of the chronometer
+    speed, // Chronometer speed
+    maxMilliseconds // Maximum time for the chronometer
   );
 }

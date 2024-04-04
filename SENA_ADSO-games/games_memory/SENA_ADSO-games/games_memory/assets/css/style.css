@@ -1,0 +1,60 @@
+@font-face {
+  font-family: honk;
+  src: url("../fonts/Honk/Honk-Regular-VariableFont_MORF\,SHLN.ttf");
+}
+
+body {
+  background: rgb(45, 42, 58);
+  font-family: honk;
+  font-size: large;
+  text-transform: uppercase !important;
+}
+.titleGames {
+  font-size: 5em;
+}
+
+input {
+  text-transform: uppercase !important;
+  background: #000 !important;
+}
+select {
+  text-transform: uppercase !important;
+  background: #000 !important;
+  cursor: pointer;
+}
+.game-over-message {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 300px; /* Tamaño de la fuente para el div */
+  width: 600px; /* Ajusta el ancho del elemento */
+  height: 200px; /* Ajusta la altura del elemento */
+  background-color: rgba(32, 223, 7, 0.747);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 9999;
+  text-align: center; /* Centra el texto horizontalmente */
+}
+.game-over-message h2 {
+  font-size: 100px; /* Tamaño de la fuente para el texto "Game Over" */
+}
+
+#btn_start {
+  background: #000;
+  border: solid 2px green;
+  font-size: 2em;
+}
+
+#btn_start:hover {
+  background: rgb(0, 96, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 96, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  border-radius: 10px;
+  font-size: 1.9em;
+}

@@ -1,5 +1,46 @@
+body {
+  background-image: url("../img/img/pexels-elle-hughes-2696064.jpg"); /* Establecer la imagen de fondo */
+  background-size: cover; /* Ajustar el tamaño de la imagen para cubrir todo el cuerpo */
+  background-repeat: no-repeat; /* Evitar que la imagen se repita */
+  /* Puedes agregar más propiedades como background-position si deseas ajustar la posición de la imagen */
+}
+
 .container-form {
-  background: rgba(129, 158, 175, 0.438);
+  background: rgba(162, 213, 255, 0.87);
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 1px gray;
+  box-shadow: 0px 0px 10px 1px rgb(128, 128, 128);
+}
+
+/* Estilo para cambiar el color del ícono al pasar el mouse */
+#btn-password img {
+  transition: filter 0.3s ease; /* Transición suave */
+}
+
+#btn-password {
+  background-color: rgb(60, 63, 255); /* Cambiar el color del fondo del botón */
+}
+
+#btn-password:hover {
+  background-color: rgb(
+    122,
+    122,
+    122
+  ); /* Color de fondo del botón al pasar el mouse sobre él */
+}
+
+#btn-passwordRP {
+  background-color: rgb(60, 63, 255); /* Cambiar el color del fondo del botón */
+}
+
+#btn-passwordRP:hover {
+  background-color: rgb(
+    122,
+    122,
+    122
+  ); /* Color de fondo del botón al pasar el mouse sobre él */
+}
+
+/* Estilo para el enlace "Recover your password" al hacer hover */
+.btn-tertiary:hover {
+  color: rgb(4, 0, 255); /* Cambiar el color del texto al hacer hover */
 }

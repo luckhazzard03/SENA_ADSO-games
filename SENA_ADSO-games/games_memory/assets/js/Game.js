@@ -31,6 +31,9 @@ class Game {
     this.totalPoint = 0; //accumulating Value Points
     this.contCardClass = "contCard"; //This class container card
     this.objChronometer = new Chronometer(chor, speed, maxMilliseconds);
+    this.gameOverMessage = document.getElementById("gameOverMessage"); // Obtener referencia al elemento del mensaje de "Game Over"
+    this.attempts = 0; // Inicializar el contador de intentos
+    this.maxAttempts = 25; // Establecer el número máximo de intentos
   }
 
   //Method to read the JSON file, execute the setElements method sending an array of data
@@ -112,13 +115,13 @@ class Game {
     for (let i = 0; i < this.contCardGame.length; i++) {
       const objImg = this.contCardGame[i].querySelector("img");
       this.contCardGame[i].addEventListener("click", () => {
-        /*if (objImg.src == pathDefault) {
-          objImg.src = objImg.dataset.src;
-          this.setSelectCard(objImg);
-        }*/
         if (objImg.src.includes(this.pathImgDafault)) {
           objImg.src = objImg.dataset.src;
           this.setSelectCard(objImg);
+          this.attempts++; // Incrementar el contador de intentos
+          if (this.attempts >= this.maxAttempts) {
+            this.showGameOverMessage(); // Mostrar "Game Over" después de 25 intentos
+          }
         }
       });
     }
@@ -176,5 +179,19 @@ class Game {
   setProgressData(dataProgress) {
     this.progCont.innerText = parseInt(dataProgress) + "%";
     this.progCont.style.width = dataProgress + "%";
+  }
+  // Método para mostrar el mensaje de "Game Over"
+  showGameOverMessage() {
+    // Aquí se agrega la animación para el "Game Over"
+    const gameOverElement = document.getElementById("gameOverMessage");
+    gameOverElement.classList.add("animate__animated", "animate__fadeInDown");
+
+    // Mostrar el mensaje de "Game Over"
+    gameOverElement.style.display = "block";
+  }
+  checkLevelCompletion() {
+    if (!nivelCompletado) {
+      this.showGameOverMessage(); // Mostrar el letrero de "Game Over"
+    }
   }
 }

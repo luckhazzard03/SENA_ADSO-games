@@ -18,8 +18,7 @@ function getDataForm(obj) {
   if (getData != "" || getData.length != 0) {
     getData = getData.toUpperCase();
     setDataStorage(getData);
-    setLocation(uri + '?user=' + getData+'&points=0');
-
+    setLocation(uri + "?user=" + getData + "&points=0");
   } else {
     alert("Error: data validation");
     obj.focus();
@@ -27,7 +26,6 @@ function getDataForm(obj) {
 }
 /**This set data Storage**/
 function setDataStorage(data) {
-
   let object = '{"' + modelStorage + '":[{"user":"' + data + '","points":0}]}';
   if (ObjJSON == null) {
     storageGame.setStorage(object);
@@ -46,7 +44,7 @@ function validateUserRegister(jsonStorage, objectUser) {
       jsonStorage.User = [];
     }
     let getDataObjet = JSON.parse(objectUser);
-    let nameUser = jsonStorage.User.map(user => user.user);
+    let nameUser = jsonStorage.User.map((user) => user.user);
     if (!nameUser.includes(getDataObjet.user)) {
       jsonStorage.User.push(getDataObjet);
     } else {
@@ -54,7 +52,6 @@ function validateUserRegister(jsonStorage, objectUser) {
     }
   }
   return jsonStorage;
-
 }
 /**This locations**/
 function setLocation(route) {
@@ -64,19 +61,21 @@ function setLocation(route) {
 
 /**This create Select html**/
 function setCreateSelect(getJson) {
-  var newOptions = '<option value="0" selected style="font-size: 1.5em;">SELECT PROFILE</option>';
+  var newOptions =
+    '<option value="0" selected style="font-size: 1.5em;">SELECT PROFILE</option>';
   var contSelect = document.getElementById(objSelect);
   let getData = JSON.parse(getJson);
   if (getData != null) {
-    getData[modelStorage].forEach(element => {
-      newOptions += '<option value="' + element.user + '">' + element.user + '</option>';
+    getData[modelStorage].forEach((element) => {
+      newOptions +=
+        '<option value="' + element.user + '">' + element.user + "</option>";
     });
   }
   contSelect.innerHTML = newOptions;
 }
 /**This create Select html**/
 function setProfile(data) {
-  let objInput = document.getElementById('username');
+  let objInput = document.getElementById("username");
   if (data != 0) {
     objInput.value = data;
   } else {
@@ -84,11 +83,11 @@ function setProfile(data) {
   }
 }
 /**This get event submit **/
-document.getElementById(objForm).addEventListener('submit', function (event) {
-  let element = this.querySelector('input[type=text]');
+document.getElementById(objForm).addEventListener("submit", function (event) {
+  let element = this.querySelector("input[type=text]");
   getDataForm(element);
   event.preventDefault();
-})
+});
 
 function getDataUser() {
   if (localStorage.length != 0) {
@@ -97,11 +96,6 @@ function getDataUser() {
 }
 
 /**This load view**/
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   getDataUser();
 });
-
-
-
-
-

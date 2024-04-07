@@ -3,34 +3,27 @@
 /*import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";*/
 
+//let objUser= '{"'+modelStorage+'":["user":"'+getData+'","points":"0"]}';
+// Import the functions you need from the SDKs you need
+/*import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";*/
+
 class StorageGame {
-  constructor(model) {
-    this.modelStorage = model; //This variable contains the name of the local storage model.
-    this.database = firebase.database();
+  constructor(modelName) {
+    this.modelName = modelName;
   }
 
-  async getStorage() {
-    try {
-      const snapshot = await this.database.ref(this.modelStorage).once("value");
-      return snapshot.val();
-    } catch (error) {
-      console.error("Error getting data from Firebase:", error);
-      return null;
-    }
+  getStorage() {
+    // Implementa la lógica para obtener los datos de almacenamiento (localStorage, Firebase, etc.)
+    return localStorage.getItem(this.modelName);
   }
 
-  async setStorage(json) {
-    try {
-      await this.database.ref(this.modelStorage).set(json);
-      return true;
-    } catch (error) {
-      console.error("Error setting data to Firebase:", error);
-      return false;
-    }
+  setStorage(json) {
+    // Implementa la lógica para establecer los datos de almacenamiento (localStorage, Firebase, etc.)
+    localStorage.setItem(this.modelName, json);
   }
 }
 
-export default StorageGame;
 /* Initialize Firebase
 export const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);*/

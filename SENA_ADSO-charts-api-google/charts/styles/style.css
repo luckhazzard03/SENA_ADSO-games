@@ -1,0 +1,28 @@
+body {
+  background-color: #e7faff; /* Color de fondo para el cuerpo */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Tamaño completo de la ventana */
+}
+
+.columns {
+  width: 90%;
+  border-collapse: collapse;
+}
+
+.columns td {
+  padding: 50px;
+  border: 1px solid #8d8d8dd2;
+  background-color: #c7eff1; /* Color de fondo para las celdas */
+}
+
+/* Estilos para los gráficos */
+#piechart_div,
+#barchart_div {
+  width: 500px;
+  height: 300px;
+}

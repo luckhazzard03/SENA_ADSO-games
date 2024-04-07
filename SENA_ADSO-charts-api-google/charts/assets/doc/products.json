@@ -1,0 +1,142 @@
+[
+  {
+    "code": "001",
+    "name": "Mug mágico",
+    "description": "Bebidas calientes.",
+    "value": 1200,
+    "type": "cerámico"
+  },
+  {
+    "code": "002",
+    "name": "Mug tapa de caucho",
+    "description": "Bebidas calientes.",
+    "value": 800,
+    "type": "cerámico"
+  },
+  {
+    "code": "003",
+    "name": "Mug mágico tapa de caucho",
+    "description": "Bebidas calientes.",
+    "value": 150,
+    "type": "cerámico"
+  },
+  {
+    "code": "004",
+    "name": "Mug blanco",
+    "description": "Bebidas calientes.",
+    "value": 50,
+    "type": "cerámico"
+  },
+  {
+    "code": "005",
+    "name": "Mug pastel",
+    "description": "Bebidas calientes.",
+    "value": 700,
+    "type": "cerámico"
+  },
+  {
+    "code": "006",
+    "name": "Termo carro",
+    "description": "Bebidas calientes.",
+    "value": 40,
+    "type": "Aluminio"
+  },
+  {
+    "code": "007",
+    "name": "Termo digital",
+    "description": "Bebidas calientes.",
+    "value": 30,
+    "type": "Aluminio"
+  },
+  {
+    "code": "008",
+    "name": "Termo conejo",
+    "description": "Bebidas calientes.",
+    "value": 200,
+    "type": "Aluminio"
+  },
+  {
+    "code": "009",
+    "name": "Termo pitillo",
+    "description": "Bebidas calientes.",
+    "value": 70,
+    "type": "Aluminio"
+  },
+  {
+    "code": "010",
+    "name": "termo gato",
+    "description": "Bebidas calientes.",
+    "value": 80,
+    "type": "Aluminio"
+  },
+  {
+    "code": "011",
+    "name": "Termo ovni",
+    "description": "Bebidas calientes.",
+    "value": 300,
+    "type": "Aluminio"
+  },
+  {
+    "code": "012",
+    "name": "Jarro cervecero",
+    "description": "Bebida fria",
+    "value": 500,
+    "type": "Vidrio"
+  },
+  {
+    "code": "013",
+    "name": "Cervecero Mágico",
+    "description": "Bebida fria",
+    "value": 25,
+    "type": "Vidrio"
+  },
+  {
+    "code": "014",
+    "name": "Mug espejo",
+    "description": "Bebidas calientes.",
+    "value": 400,
+    "type": "cerámico"
+  },
+  {
+    "code": "015",
+    "name": "Lata tipo gaseosa",
+    "description": "Bebida fria",
+    "value": 150,
+    "type": "Aluminio"
+  },
+  {
+    "code": "016",
+    "name": "Caramañola",
+    "description": "Bebida fria",
+    "value": 80,
+    "type": "Aluminio"
+  },
+  {
+    "code": "017",
+    "name": "Caramañola pitillo",
+    "description": "Bebida fria",
+    "value": 100,
+    "type": "Aluminio"
+  },
+  {
+    "code": "018",
+    "name": "Caramañola tapa rosca",
+    "description": "Bebida fria",
+    "value": 20,
+    "type": "Aluminio"
+  },
+  {
+    "code": "019",
+    "name": "Mini mug",
+    "description": "Bebidas calientes.",
+    "value": 35,
+    "type": "cerámico"
+  },
+  {
+    "code": "020",
+    "name": "Mug fondo color",
+    "description": "Bebidas calientes.",
+    "value": 15,
+    "type": "cerámico"
+  }
+]

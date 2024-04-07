@@ -22,6 +22,25 @@ select {
   background: #000 !important;
   cursor: pointer;
 }
+.game-over-message {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  font-size: 300px; /* Tamaño de la fuente para el div */
+  width: 600px; /* Ajusta el ancho del elemento */
+  height: 200px; /* Ajusta la altura del elemento */
+  background-color: rgba(32, 223, 7, 0.747);
+  color: white;
+  padding: 40px;
+  border-radius: 10px;
+  z-index: 9999;
+  text-align: center; /* Centra el texto horizontalmente */
+}
+.game-over-message h2 {
+  font-size: 100px; /* Tamaño de la fuente para el texto "Game Over" */
+}
 
 #btn_start {
   background: #000;
